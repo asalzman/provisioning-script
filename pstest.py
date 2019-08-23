@@ -25,7 +25,7 @@ df2 = csv.DictReader(f, encoding = 'utf-8')
 labels = next(df)
 secondrow = next(df)
 
-typelist = ["bigint", "text", "text", "text", "text",  "text","text", "bigint", "bigint","text", "text","text", "text", "text", "text", "bigint", "text", "bigint", "text", "text", "bigint", "text", "text", "numeric", "numeric",  "numeric", "numeric", "text",  "text", "text", "text"]
+typelist = ["bigint PRIMARY KEY", "text", "text", "text", "text",  "text","text", "bigint", "bigint","text", "text","text", "text", "text", "text", "bigint", "text", "bigint", "text", "text", "bigint", "text", "text", "numeric", "numeric",  "numeric", "numeric", "text",  "text", "text", "text"]
 
 print("Dropping old table...")
 

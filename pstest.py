@@ -72,7 +72,7 @@ for z in tqdm(df):
 print("Creating index...")
 
 cursor.execute("CREATE MATERIALIZED VIEW search_index AS SELECT tweetid, tweet_text, user_screen_name, user_reported_location, follower_count, tweet_language, like_count, retweet_count, setweight(to_tsvector(tweets.tweet_text), 'A') as document from tweets;")
-cursor.execute("CREATE INDEX idx_search ON search_index USING gin(document);")  
+cursor.execute("CREATE INDEX active_search_idx ON search_index USING gin(document);")  
 
 print("Finishing up...")
 
